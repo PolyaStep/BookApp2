@@ -1,7 +1,7 @@
 #  Book Shelf App
 
 A modern **React + Ionic + Firebase** application for managing your personal book collection.  
-Users can register, log in, search for books, add favorites, and manage their personal bookshelf with real-time updates. Users are able to edit their profiles like changing photo, user name, email.
+Users can register, log in, search for books, add favorites, and manage their personal bookshelf with real-time updates. Users are able to edit their profiles like changing avatar, user name, email.
 
 ---
 
