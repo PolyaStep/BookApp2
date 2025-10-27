@@ -5,6 +5,7 @@ import { BrowserRouter } from "react-router-dom";
 import { AuthProvider } from "./context/AuthContext";
 import App from "./App";
 import "@ionic/react/css/core.css";
+import "./theme/variables.css";
 
 setupIonicReact();
 

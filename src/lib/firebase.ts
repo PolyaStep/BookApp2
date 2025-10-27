@@ -1,6 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getAuth, setPersistence, browserLocalPersistence } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
+import { getStorage } from "firebase/storage"; // для картинок
 
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
@@ -11,7 +12,12 @@ const firebaseConfig = {
   appId: import.meta.env.VITE_FIREBASE_APP_ID,
 };
 
+console.log("Firebase config:", firebaseConfig); // 🔍 Можно удалить после проверки
+
 const app = initializeApp(firebaseConfig);
+
 export const auth = getAuth(app);
 setPersistence(auth, browserLocalPersistence);
+
 export const db = getFirestore(app);
+export const storage = getStorage(app);
