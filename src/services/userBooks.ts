@@ -7,7 +7,7 @@ export type BookLite = {
   authors?: string;
   thumbnail?: string;
   description?: string;
-  genres?: string[];     // массив жанров
+  genres?: string[];
 };
 
 export async function addBookToUser(uid: string, book: BookLite) {
@@ -16,10 +16,10 @@ export async function addBookToUser(uid: string, book: BookLite) {
     title: book.title,
     author: book.authors || "Unknown",
     coverUrl: book.thumbnail || "",
-    description: book.description || "",     // ✅ сохраним
-    genres: book.genres || [],               // ✅ сохраним
-    status: "wishlist",                      // wishlist | reading | finished (можно расширить)
-    liked: null,                             // null | true | false
+    description: book.description || "",
+    genres: book.genres || [],
+    status: "wishlist",
+    liked: null,
     createdAt: serverTimestamp(),
     updatedAt: serverTimestamp(),
   }, { merge: true });
