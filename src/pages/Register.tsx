@@ -17,7 +17,7 @@ import { db } from "../lib/firebase";
 import { doc, setDoc, serverTimestamp } from "firebase/firestore";
 import { updateProfile } from "firebase/auth";
 import lottie, { AnimationItem } from "lottie-web";
-import "../theme/variables.css"; // ✅ optional explicit import (if not global)
+import "../theme/variables.css";
 
 export default function Register() {
   const { register } = useAuth();
