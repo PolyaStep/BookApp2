@@ -29,9 +29,8 @@
   text-align: center;
 }
 
-/* Компактные поля для форм */
 ion-item.compact {
-  --min-height: 40px;           /* ниже стандартного */
+  --min-height: 40px;
   --inner-padding-top: 2px;
   --inner-padding-bottom: 2px;
   --padding-start: 8px;
@@ -40,7 +39,6 @@ ion-item.compact {
 }
 
 ion-input.compact {
-  /* хост-переменные влияют на container внутри shadow */
   --padding-top: 6px;
   --padding-bottom: 6px;
   --padding-start: 10px;
@@ -50,13 +48,11 @@ ion-input.compact {
   background: white;
 }
 
-/* Точно задаём высоту самого native <input> через shadow part */
 ion-input.compact::part(native) {
-  height: 28px;                 /* ← реальная визуальная высота текста */
+  height: 28px;
   line-height: 28px;
 }
 
-/* Чуть меньше расстояние между полями */
 ion-item.compact + ion-item.compact {
   margin-top: 8px;
 }
