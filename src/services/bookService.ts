@@ -12,8 +12,8 @@ export async function searchBooks(query: string) {
       title: v.title,
       authors: v.authors?.join(", "),
       thumbnail: v.imageLinks?.thumbnail || "",
-      description: v.description || "",        // ✅ описание (если есть)
-      genres: v.categories || [],              // ✅ жанры (массив строк)
+      description: v.description || "",
+      genres: v.categories || [],
       preview: v.previewLink || "",
     };
   });
